@@ -14,13 +14,16 @@ def home():
 
 @app.route('/predict',methods=['POST','GET'])
 def predict():
-    userdata=[int(x) for x in request.form.values()]
-    final=[np.array(userdata)]
-    print(clf.predict(userdata)) 
-    classprobs = clf.predict_proba(userdata)
-    predclassprob = np.max(classprobs)
+    if request.method == 'GET:
+        return render_template('index.html',pred='Sutaible career option for this student is {}'.format(predclassprob))
+    if request.method == 'POST:
+        userdata=[int(x) for x in request.form.values()]
+        final=[np.array(userdata)]
+        print(clf.predict(userdata)) 
+        classprobs = clf.predict_proba(userdata)
+        predclassprob = np.max(classprobs)
 
-   return render_template('index.html',pred='Sutaible career option for this student is {}'.format(predclassprob))
+        return render_template('result.html',pred='Sutaible career option for this student is {}'.format(predclassprob))
   
 if __name__ == '__main__':
     app.run(debug=True)
