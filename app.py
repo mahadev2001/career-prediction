@@ -23,7 +23,7 @@ def predict():
         classprobs = clf.predict_proba(userdata)
         predclassprob = np.max(classprobs)
 
-        return render_template('result.html',pred='Sutaible career option for this student is {}'.format(predclassprob))
+        return render_template('result.html',result=predclassprob)
   
 if __name__ == '__main__':
     app.run(debug=True)
