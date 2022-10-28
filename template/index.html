@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>Career Prediction</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">  
+       
+        </head>
+    <body>
+        <section>           
+        <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Career Prediction</h1>
+                            <span class="subheading">Helps teachers to guide students for right career path </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        </section>
+        
+            <section >
+                <div class="container">           
+                <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+                <form action="/predict" method="POST" >
+                Logical quotient rating: <br>
+                <input type="number" name="Logical quotient rating" placeholder="Enter valve between 0-10" min="0" max="10" required><br>
+                
+                hackathons: <br>
+                <input type="number" name="hackathons" placeholder="Enter number of hackathons attended by student" required><br>
+                
+                coding skills rating: <br>
+                <input type="number" name="coding skills rating" placeholder="coding skills rating" required><br>
+                
+                public speaking points: <br>
+                <input type="number" name="public speaking points" placeholder="public speaking points" required><br>
+                
+                self-learning capability?: <br>
+                <select name="self-learning capability?" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option> 
+                    </select>
+
+                Extra-courses did: <br>
+                <select name="Extra-courses did" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                    </select>
+
+                certifications: <br> 
+                <select name="certifications" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">r programming </option>
+                    <option value="2">information security</option>
+                    <option value="3">shell programming</option>
+                    <option value="4">machine learning</option>
+                    <option value="5">full stack</option>
+                    <option value="6">hadoop</option>  
+                    <option value="7">python</option>
+                    <option value="8">distro making</option>
+                    <option value="9">app development</option>
+                </select>             
+                
+                reading and writing skills: <br>
+                <select name="reading and writing skills" class="dropdown_1" >
+                    <option></option>
+                    <option value="0">poor</option>
+                    <option value="1">medium</option>
+                    <option value="2">excellent</option>
+                </select>    
+
+                memory capability score: <br>
+                <select name="memory capability score" class="dropdown_1" >
+                    <option></option>
+                    <option value="0">poor</option>
+                    <option value="1">medium</option>
+                    <option value="2">excellent</option>
+                </select> 
+
+                Interested subjects: <br>
+                <select name="Interested subjects" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Software Engineering</option>
+                    <option value="2">IOT</option>
+                    <option value="3">cloud computing domain</option>
+                    <option value="4">programming </option>
+                    <option value="5">networks </option>
+                    <option value="6">Computer Architecture</option>  
+                    <option value="7">data engineering </option>
+                    <option value="8">hacking</option>
+                    <option value="9">Management</option>
+                    <option value="10">parallel computing</option>  
+                </select>  
+                           
+                interested career area : <br>
+                <select name="interested career area" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">system developer</option>
+                    <option value="2">security</option>
+                    <option value="3">Business process analyst</option>
+                    <option value="4">developer </option>
+                    <option value="5">testing </option>
+                    <option value="6">cloud computing </option>  
+                </select>
+
+                Type of company want to settle in?: <br>
+                <select name="Type of company want to settle in?" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Service Based</option>
+                    <option value="2">Web Services  </option>
+                    <option value="3">BPA</option>
+                    <option value="4">Testing and Maintainance Services </option>
+                    <option value="5">Product based  </option>
+                    <option value="6">Finance</option>  
+                    <option value="7">Cloud Services </option>
+                    <option value="8">product development  </option>
+                    <option value="9">Sales and Marketing</option>
+                    <option value="10">SAaS services </option>  
+                </select>
+
+                Taken inputs from seniors or elders: <br>
+                <select name="Taken inputs from seniors or elders" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                Management or Technical: <br>
+                <select name="Management or Technical" class="dropdown_1" >
+                    <option></option>
+                    <option value="0">Management</option>
+                    <option value="0">Technical</option>
+                </select>
+
+                Hard Worker or Smart Worker: <br>
+                <select name="Introvert" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Smart Worker</option>
+                    <option value="0">Hard Worker</option>
+                </select>
+
+                worked in teams ever?: <br>
+                <select name="worked in teams ever?" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+
+                Introvert: <br>
+                <select name="Introvert" class="dropdown_1" >
+                    <option></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            
+                <input type="submit" name="submit" value="Predict" class="button">
+                </div>
+                </div>
+                </div>
+            </form>
+           
+        </section>        
+    </body>
+</html>
